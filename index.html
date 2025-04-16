@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>ActiveReportsJS Designer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ActiveReportsJS用のスタイルシート -->
+    <link rel="stylesheet" href="./node_modules/@mescius/activereportsjs/styles/ar-js-ui.css" /> <!-- UI用スタイル -->
+    <link rel="stylesheet" href="./node_modules/@mescius/activereportsjs/styles/ar-js-designer.css" /> <!-- デザイナー用スタイル -->
+    <link rel="stylesheet" href="./node_modules/@mescius/activereportsjs/styles/ar-js-viewer.css" /> <!-- ビューア用スタイル -->
+
+    <!-- ActiveReportsJS用のスクリプト -->
+    <script src="./node_modules/@mescius/activereportsjs/dist/ar-js-core.js"></script> <!-- コア機能 -->
+    <script src="./node_modules/@mescius/activereportsjs/dist/ar-js-designer.js"></script> <!-- デザイナー機能 -->
+    <script src="./node_modules/@mescius/activereportsjs/dist/ar-js-viewer.js"></script> <!-- ビューア機能 -->
+    <script src="./node_modules/@mescius/activereportsjs/dist/ar-js-pdf.js"></script> <!-- PDFエクスポート機能 -->
+    <script src="./node_modules/@mescius/activereportsjs/dist/ar-js-tabular-data.js"></script> <!-- 表形式データ機能 -->
+    <script src="./node_modules/@mescius/activereportsjs/dist/ar-js-html.js"></script> <!-- HTMLエクスポート機能 -->
+    <script src="./node_modules/@mescius/activereportsjs-i18n/dist/designer/ja-locale.js"></script> <!-- 日本語ロケール -->
+
+    <!-- 外部スクリプト -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> <!-- Bootstrap -->
+
+    <!-- 外部フォントとスタイルシート -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"/> <!-- Googleフォント -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" /> <!-- Bootstrapスタイル -->
+    <!-- ページ全体のスタイルを外部CSSファイルに分割 -->
+    <link rel="stylesheet" href="css/styles.css" /> <!-- カスタムスタイル -->
+  </head>
+
+  <body>
+    <!-- デザイナーとビューアーのホスト要素 -->
+    <div id="designer-host"></div> <!-- デザイナーの表示領域 -->
+    <div id="viewer-host"></div> <!-- ビューアの表示領域 -->
+
+    <!-- ローカルスクリプト -->
+    <script src="scripts/designer.js"></script> <!-- デザイナー機能のスクリプト -->
+    <script src="scripts/OpenReports.js"></script> <!-- レポート操作用スクリプト -->
+    <script src="scripts/SaveDialog.js"></script><!-- 保存ダイアログ用スクリプト -->
+  </body>
+</html>
