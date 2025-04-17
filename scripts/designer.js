@@ -19,27 +19,9 @@ var viewerHost = document.getElementById("viewer-host");
 var designerHost = document.getElementById("designer-host");
 
 
-/* fillReportList関数はDesignerHandlers.jsに移動しました */
-
-// 指定したセレクタの要素を表示/非表示にする関数
-function setVisibility(selector, isVisible) {
-  document.querySelectorAll(selector).forEach(function (element) {
-    isVisible
-      ? element.classList.remove("hide") // 表示
-      : element.classList.add("hide"); // 非表示
-  });
-}
-
-// デザイナを開く際の処理
-function onOpenDesigner() {
-  setVisibility("#viewer-host, #btnDesignerOpen", false); // ビューアを非表示
-  setVisibility("#designer-host, #btnPdfPreview", true); // デザイナを表示
-}
-
 // レポートビューアとデザイナのインスタンスを作成
-viewer = new MESCIUS.ActiveReportsJS.ReportViewer.Viewer("#viewer-host", {language: "ja",});
+viewer = new MESCIUS.ActiveReportsJS.ReportViewer.Viewer("#viewer-host", {language: "ja"});
 designer = new MESCIUS.ActiveReportsJS.ReportDesigner.Designer("#designer-host", { language: "ja" });
-//designer.setReport({ id: "./reports/quick-start-sample.rdlx-json" });
 
 // デザイナのアクションハンドラを設定
 designer.setActionHandlers({
@@ -99,7 +81,7 @@ designer.setActionHandlers({
 // デザイナを開くボタンの設定
 var designButton = {
   key: "$openDesigner",
-  tooltip: "デザイナで開く", // ボタンのツールチップ
+  text: "デザイナで編集", // ボタンのツールチップ
   iconCssClass: "mdi mdi-pencil", // ボタンのアイコン
   enabled: true, // ボタンの有効化
   action: function (item) {
